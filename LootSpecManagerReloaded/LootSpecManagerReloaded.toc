@@ -1,6 +1,7 @@
-## Interface: 100002
+## Interface: 110105
 ## Author: Req, gegenschall, Geloch-Sanguino
-## Title: LootSpecManagerReloaded
+## Title: LootSpecManager (Reloaded)
+## Category: Loot
 ## Notes: Manages loot spec preferences for dungeon/raid bosses.
 ## SavedVariables: LootSpecManagerReloadedDB
 ## X-Curse-Project-ID: 1286524
