@@ -1,0 +1,31 @@
+name: Liting and Artifact generation
+
+on: 'push'
+
+jobs:
+    Lint-Project:
+      runs-on: ubuntu-latest
+      steps:
+       - uses: actions/checkout@v4
+         with:
+           fetch-depth: 500
+       - name: Lint lua files
+         uses: nebularg/actions-luacheck@v1.1.2
+         with:
+           args: "--no-color -q --no-self"
+           annotate: warning
+       - name: Create package
+         uses: BigWigsMods/packager@master
+         with:
+            args: -d -z
+       - name: Upload alpha package to artifacts
+         uses: actions/upload-artifact@v4
+         with:
+           name: LootSpecManagerReloaded.zip
+           path: |
+             .release/*
+       - name: Remove old artifacts
+         uses: c-hive/gha-remove-artifacts@v1
+         with:
+           age: '3 month'
+           skip-tags: true
