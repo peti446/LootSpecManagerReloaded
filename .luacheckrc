@@ -103,5 +103,6 @@ globals = {
 	"EncounterJournal",
 	"C_Map",
 	"C_Loot",
-	"EJ_InstanceIsRaid"
+	"EJ_InstanceIsRaid",
+	"EncounterJournalEncounterFrameInfoDifficulty"
 }
